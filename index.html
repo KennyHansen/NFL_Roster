@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NFL Roster</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">My NFL Roster</div>
+            <div class="panel-body"> 
+                <div class="player-roster" id="stuff">
+                    <!--Example-->
+                    <div class="player-card">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
+                        <p>Name: </p>
+                        <p>Position: </p>
+                        <p>#: </p> 
+                    </div>
+                    
+                    <!--add stuff here-->
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Add New Player</div>
+            <div class="panel-body"> 
+                <div class="player-form">
+                    <form onsubmit="pc.addPlayer(event)">
+                        <input type="text" name="playerName" placeholder="Name" maxlength="40" required>
+                        <input type="text" name="playerPosition" placeholder="Position" maxlength="30" required>
+                        <input type="number" name="playerNumber" placeholder="#" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="player-service.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

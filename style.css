@@ -1,0 +1,7 @@
+.player-card {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: lightgoldenrodyellow;
+    border-radius: 5px;
+    padding: 10px;
+}
